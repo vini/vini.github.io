@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap');
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+[data-bs-theme="dark"] {
+  --bs-body-bg: #0b0c14;
+  --bs-body-color: #F2F2F8;
+
+  --bs-primary: #5E5CE6;
+  --bs-primary-rgb: 94, 92, 230;
+
+  --bs-secondary: #232162;
+
+  --bs-link-color: #9A8CFC;
+  --bs-link-hover-color: #B3B3FF;
+
+  --bs-border-color: #1B194F;
+
+  --bs-card-bg: #05000c;
+  --bs-card-border-color: #05000c;
+
+  --bs-section-work-bg: #5E5CE6;
+
+  --bs-text-muted: #F2F2F8;
+
+  --bs-footer-bg: #000006;
+  --bs-footer-color: #e6eef3;
+
+  --bs-badge-color: #FFFFFF;
+
+  --bs-primary: #5E5CE6;
+  --bs-secondary: #2C2A7B;
+  --bs-success: #2DD4BF;
+  --bs-warning: #FACC15;
+  --bs-danger: #F87171;
+  --bs-info: #38BDF8;
+
+  --bs-badge-skill-bg: #121212;
+  --bs-badge-skill-color: #e961b5;
+}
+
+[data-bs-theme="light"] {
+  --bs-body-bg: #F4F3FF;
+  --bs-body-color: #1F1E3A;
+
+  --bs-primary: #5E5CE6;
+  --bs-primary-rgb: 94, 92, 230;
+
+  --bs-secondary: #E8E7FF;
+
+  --bs-link-color: #5E5CE6;
+  --bs-link-hover-color: #4A48D4;
+
+  --bs-border-color: #D8D7F2;
+
+  --bs-card-bg: #FFFFFF;
+  --bs-card-border-color: #D8D7F2;
+
+  --bs-section-work-bg: #efefef;
+
+  --bs-text-muted: #1F1E3A;
+
+  --bs-footer-bg: #4e4e4e;
+  --bs-footer-color: #e6eef3;
+
+  --bs-badge-color: #FFFFFF;
+
+  --bs-primary: #5E5CE6;
+  --bs-secondary: #E8E7FF;
+  --bs-success: #4ADE80;
+  --bs-warning: #FDE68A;
+  --bs-danger: #FCA5A5;
+  --bs-info: #7DD3FC;
+
+  --bs-badge-skill-bg: #5E5CE6;
+  --bs-badge-skill-color: #E8E7FF;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: --bs-body-bg;
+  color: --bs-body-color;
+}
+
+/*
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}*/
+
+/* Header */
+.navbar {
+  background:rgba(10, 10, 10, 0.90);
+  color:#00ff88;
+  min-height:100px;
+  position:fixed;
+  z-index:999;
+  width:100%;
+}
+.navbar-brand {
+  font-weight: 700;
+  color:#00ff88;
+  text-shadow: 0 0 0px rgba(0, 255, 136, 0.4);
+  font-family: 'Inconsolata', monospace;
+  font-size:15epx;
+}
+
+.cursor {
+  font-weight: bold;
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Hero */
+.hero {
+  padding: 5rem 0 3rem;
+  padding-bottom:130px;
+}
+
+.badge-available {
+  background: #4077d1;
+  color: #fff;
+  font-weight: 500;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.hero p {
+  max-width: 600px;
+  color: #e6eef3;
+}
+
+/* Section background */
+.section-work {
+  background: var(--bs-section-work-bg);
+}
+
+.btn-theme-toggle {
+  position: fixed !important;
+  z-index:9999;
+  left: 20px !important;
+  bottom: 12px !important;
+  padding: 3px 6px !important;
+}
+
+/* Cards */
+.project-card {
+  border: none;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform .2s ease, box-shadow .2s ease;
+  background: linear-gradient(135deg, #1e1e1e, #141414);
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+.tech-badge {
+  background: var(--bs-badge-skill-bg);
+  color: var(--bs-badge-skill-color);
+  font-size: .75rem;
+  margin-right: .25rem;
+}
+
+.row-brands { margin-top:40px; }
+.col-brands {
+  margin-bottom:30px;
+}
+.col-brands img {
+  height:48px;
+  filter: brightness(0) saturate(100%) invert(1);
+}
+
+/* About */
+#about {
+  background: linear-gradient(135deg, #1e1e1e, #141414);
+}
+.about-img {
+  border-radius: 200px;
+  border:1px solid #e8e8e8;
+  max-width: 100%;
+}
+
+.skill-badge {
+  background: var(--bs-badge-skill-bg);
+  color: var(--bs-badge-skill-color);
+  font-size: .85rem;
+  margin: .25rem;
+}
+
+.text-muted {
+  color: --bs-body-color;
+}
+
+.btn {
+  background: #5E5CE6;
+  border: 1px solid #1d1c5b;
+  box-shadow: 1px 1px 1px #000;
+  font-weight:500;
+}
+.btn:hover {
+  background:#6563fa;
+  border: 1px solid #1d1c5b;
+  box-shadow: 1px 1px 1px #000;
+}
+
+footer {
+  padding: 2rem 0;
+  background: var(--bs-footer-bg);
+  color: var(--bs-footer-color);
+  font-size: .9rem;
+}
+
+/* whatsapp button */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 12px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+}
+
+.whatsapp-btn img {
+  width: 30px;
+  height: 30px;
+}
+
+.whatsapp-btn:hover {
+  background-color: #1ebe57;
+  transform: scale(1.1);
+}
+/* */
+
+
+/* from left */
+.slide-in {
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: slideRight 0.8s ease-out forwards;
+}
+
+@keyframes slideRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* */
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* fundo da barra */
+::-webkit-scrollbar-track {
+  background: #0f0f0f;   /* fundo escuro */
+}
+
+/* parte que se move */
+::-webkit-scrollbar-thumb {
+  background: #00ff88;   /* verde terminal */
+  border-radius: 6px;
+}
+
+/* hover no thumb */
+::-webkit-scrollbar-thumb:hover {
+  background: #33ffaa;
+}
+/* */
+
+/* CUSTOM TERM */
+.username {
+  color:#5E5CE6;
+}
+.arroba {
+  color:#5E5CE6;
+}
+.pc {
+  color:#5E5CE6;
+}
+
+/* */
+
+/* Fullscreen Button */
+#btnFullscreen {
+  position:fixed;
+  z-index:999;
+  left:60px;
+  bottom:12px;
+  background: transparent;
+  border: 1px solid #6f42c1; /* roxo suave */
+  color: #c9b6ff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#btnFullscreen:hover {
+  background: #6f42c1;
+  color: #fff;
+}
+/* */
+
+/* Mini Carousel */
+#miniCarousel img {
+  height: 200px;
+  object-fit: contain; /* ou cover se quiser preencher */
+}
+/* */
+
+/* ONLY MOBILE */
+@media (max-width: 767px) {
+  .hide-mobile {
+    display: none !important;
+  }
+  .navbar-brand {
+    font-size:15px !important;
+  }
+}
+/* */
+
+
+.carousel-logos {
+  background: transparent;
+}
+
+/* Cada célula ocupa 25% = 4 logos visíveis */
+.logo-cell {
+  width: 25%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilo das logos */
+.logo-cell {
+  width:180px;
+  height:99px;
+}
+.logo-cell img {
+  max-width: 100%;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(1);
+  transition: all 0.3s ease;
+}
+
+/* Hover premium */
+.logo-cell img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+.flickity-slider {
+  transition: transform 8s linear !important; /* aumenta para deixar mais devagar */
+}
