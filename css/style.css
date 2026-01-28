@@ -95,7 +95,7 @@ h1, h2, h3 {
 .navbar {
   background:rgba(10, 10, 10, 0.90);
   color:#00ff88;
-  min-height:100px;
+  height:100px;
   position:fixed;
   z-index:999;
   width:100%;
@@ -106,6 +106,12 @@ h1, h2, h3 {
   text-shadow: 0 0 0px rgba(0, 255, 136, 0.4);
   font-family: 'Inconsolata', monospace;
   font-size:15epx;
+}
+
+/* Estado reduzido */
+.navbar.shrink {
+  height: 64px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.25);
 }
 
 .cursor {

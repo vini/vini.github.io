@@ -30,6 +30,35 @@ $('a[href^="#"]').on('click', function(e) {
 
 });
 
+const maxScroll   = 120;
+const maxHeight   = 100;
+const minHeight   = 64;
+
+let lastHeight = maxHeight;
+
+$(window).on('scroll', function () {
+  const scroll = Math.min($(this).scrollTop(), maxScroll);
+  const progress = scroll / maxScroll;
+
+  const targetHeight =
+    maxHeight - (maxHeight - minHeight) * progress;
+
+  // evita animar se a diferença for mínima
+  if (Math.abs(targetHeight - lastHeight) > 1) {
+    $('#header')
+      .stop(true)
+      .animate(
+        { height: targetHeight },
+        {
+          duration: 80,
+          easing: 'linear'
+        }
+      );
+
+    lastHeight = targetHeight;
+  }
+});
+
 const toggle = document.getElementById("themeToggle");
 const html = document.documentElement;
 const status = document.getElementById("status");
